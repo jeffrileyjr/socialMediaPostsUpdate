@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+.form {
+    background-color: rgba(59, 59, 59, 0.678);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100vh;
+    width: 100%;
+}
+.noForm {
+    background-color: #f3f1f7;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 80%;
+    position: relative;
+    margin: auto;
+    font-family: "Dosis", sans-serif;
+    padding: 10px;
+}
+h1 {
+    font-family: 'Cedarville Cursive', cursive;
+    color: rgb(3, 169, 244);
+    font-size: 34px;
+    margin: 10px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+button, .post-content {
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 17px;
+}

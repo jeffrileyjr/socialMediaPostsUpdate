@@ -1,0 +1,35 @@
+.post-container {
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px 0 50px;
+    min-width: 50vw;
+}
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.content {
+    font-weight: 400;
+    font-size: 16px;
+}
+.votes {
+    margin: 5px;
+}
+.post-content {
+    flex: 1;
+}
+button {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    padding: 0;
+    font-size: 20px;
+}
+button:focus {
+    outline: 0;
+    
+}

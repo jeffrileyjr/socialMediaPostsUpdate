@@ -1,0 +1,22 @@
+<!-- we have a div to contain our post -->
+<div class="post-container animate__animated" [class.animate__zoomOutDown]="isDeleted">
+    <!-- and a div to hold our post content -->
+    <div class="post-content">
+        <h5 class="title"> {{ post.title }} </h5>
+        <p class="content"> {{ post.content }} </p>
+    </div>
+    <!-- a div for our votes -->
+    <div class="votes">
+        <button (click)='upVote()'>
+            👍
+        </button>
+        <span> {{ post.upvote }} </span>
+        <button (click)='downVote()'>
+            👎
+        </button>
+        <span> {{post.downvote}} </span>
+    </div>
+    <!-- lastely a button to delete our posts -->
+    <button (click)="deletePost()">🗑️</button>
+
+</div>

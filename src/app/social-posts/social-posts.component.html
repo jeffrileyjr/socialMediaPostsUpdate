@@ -1,0 +1,22 @@
+<!-- I'm going to wrap everying in a main container for styling and profiling -->
+<!-- then we set up our html to look like it needs to -->
+<body >
+    <main >
+        <div [class.form]="isClicked" [class.noForm]="!isClicked"></div>
+        <h1>My Thoughts</h1>
+        <!-- wrap those posts in a div to style -->
+        <div class="content">
+        <!-- our new post form goes here and we give it an ngIf to only display when new thought is clicked-->
+        <app-post-form *ngIf="isClicked" (added)="onAddPost($event)" [class.animate__bounceInDown]="isClicked" [class.animate__bounceOutUp]="!isClicked" class="animate__animated"></app-post-form>
+        <!-- we put our New Thought button here and we give it a click event to toggle our form to show-->
+        <button (click)="toggleForm()">New Thought</button>
+        <!-- I'm going to wrap each post in a section for styling -->
+        <section class="post-content">
+            <!-- our post component uses an ngForOf directive to display each post -->
+            <app-post *ngFor="let post of posts; index as i" (onDeletePost)="deletePost(i)" [post]="post"></app-post>
+        </section>
+    
+        </div>
+    
+    </main>
+</body>

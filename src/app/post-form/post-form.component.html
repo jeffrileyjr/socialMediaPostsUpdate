@@ -1,0 +1,12 @@
+<!-- I'm going to wrap my form in a cozy div for styling -->
+<div class="form-container" >
+    <!-- we make a form with an ngForm called newPost, which we pass to our addPost method on submit -->
+    <form #newPost="ngForm" (ngSubmit)="addPost(newPost)">
+        <label for="title">Title</label>
+        <input type="text" placeholder="Post title" name="title" ngModel>
+        <label for="thoughts">Thought</label>
+        <!-- we use a text area rather than an input to give more room -->
+        <textarea name="content"  rows="10" ngModel></textarea>
+        <button>Add Post</button>
+    </form>
+</div>
